@@ -1,0 +1,37 @@
+<script type="text/javascript">
+    function teste(){
+        document.getElementById('features').style.display ="block";
+    }
+</script>
+<style>
+    .features{
+        display:none;
+    }
+</style>
+<form>
+    <label>Name:</label><input type="text"><br>
+    <label>Race:</label><select name="race" id="race" onChange="teste()">
+        <option value="Choose" default>Choose your class</option>
+        <option value="Dragonborn">Dragonborn</option>
+        <option value="Dwarf">Dwarf</option>
+        <option value="Elf">Elf</option>
+        <option value="Gnome">Gnome</option>
+        <option value="Half-Elf">Half-Elf</option>
+        <option value="Half-Orc">Half-Orc</option>
+        <option value="Halfling">Halfling</option>
+        <option value="Human">Human</option>
+    </select><br>
+    <div class="features" id="features">
+        <label>Aligment</label><select name="aligment">
+        <option value="lg">Lawful Good</option>
+        <option value="ng">Neutral Good</option>
+        <option value="cg">Chaotic Good</option>
+        <option value="ln">Lawful Neutral</option>
+        <option value="tn">True Neutral</option>
+        <option value="cn">Chaotic Neutral</option>
+        <option value="le">Lawful Evil</option>
+        <option value="ne">Neutral Evil</option>
+        <option value="ce">Chaotic Evil</option>
+    </select><br>
+    </div>
+</form>

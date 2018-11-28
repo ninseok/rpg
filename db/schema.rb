@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_28_213358) do
+ActiveRecord::Schema.define(version: 2018_11_21_133805) do
 
   create_table "tb_classes", force: :cascade do |t|
     t.integer "cd_class"
@@ -32,13 +32,6 @@ ActiveRecord::Schema.define(version: 2018_11_28_213358) do
     t.integer "cd_spells"
     t.string "nm_spell"
     t.integer "cd_level"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "usuarios", force: :cascade do |t|
-    t.string "email"
-    t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
