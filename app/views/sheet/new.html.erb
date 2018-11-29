@@ -1,6 +1,35 @@
 <script type="text/javascript">
     function teste(){
-        document.getElementById('features').style.display ="block";
+        var features = document.getElementById('features');
+        while (features.firstChild) {
+            features.removeChild(features.firstChild);
+        }
+        var formelement = document.createElement('p');
+        var selectrace = document.getElementById('race');
+        var optionrace = selectrace.options[selectrace.selectedIndex].text;
+        var teste = checaFeatures(optionrace);
+        formelement.innerHTML = teste;
+        features.appendChild(formelement);
+        formelement = document.createElement('label');
+        formelement.innerHTML = "Draconic Ancestry";
+        features.appendChild(formelement);
+        formelement = document.createElement('select');
+        var option = document.createElement('option');
+        option.value = "Black";
+        option.text = "Black";
+        formelement.appendChild(option);
+        features.appendChild(formelement);
+        features.style.display = "block";
+    }
+    
+    function checaFeatures(race){
+        var features;
+        if (race == "Dragonborn"){
+            features = "Ability Score Increase: Charisma +1, Strenght +2<br>Size:Medium<br>Speed: 30<br>Language Proficiencies: Common, Draconic"
+        }else if (race == "Dwarf"){
+            features = "Anão"
+        }
+        return features;
     }
 </script>
 <style>
