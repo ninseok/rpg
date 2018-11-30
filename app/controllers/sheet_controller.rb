@@ -1,6 +1,6 @@
 class SheetController < ApplicationController
+  attr_reader :size
   def new
-    @sheet = Sheet.new
   end
   
   def dragonborn
