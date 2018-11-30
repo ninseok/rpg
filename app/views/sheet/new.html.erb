@@ -7,27 +7,41 @@
         var formelement = document.createElement('p');
         var selectrace = document.getElementById('race');
         var optionrace = selectrace.options[selectrace.selectedIndex].text;
-        var teste = checaFeatures(optionrace);
-        formelement.innerHTML = teste;
-        features.appendChild(formelement);
-        formelement = document.createElement('label');
-        formelement.innerHTML = "Draconic Ancestry";
-        features.appendChild(formelement);
-        formelement = document.createElement('select');
-        var option = document.createElement('option');
-        option.value = "Black";
-        option.text = "Black";
-        formelement.appendChild(option);
+        var race = checaFeatures(optionrace);
+        formelement.innerHTML = race;
         features.appendChild(formelement);
         features.style.display = "block";
     }
     
     function checaFeatures(race){
         var features;
+        var divFeature = document.getElementById('features');
+        
         if (race == "Dragonborn"){
+            var formelement = document.createElement('label');
+            formelement.innerHTML = "Draconic Ancestry"
+            divFeature.appendChild(formelement);
+            formelement = document.createElement('select');
+            var option = document.createElement('option');
+            option.value = "Black Dragon";
+            option.text = "Black Dragon";
+            formelement.appendChild(option);
+            divFeature.appendChild(formelement);
             features = "Ability Score Increase: Charisma +1, Strenght +2<br>Size:Medium<br>Speed: 30<br>Language Proficiencies: Common, Draconic"
         }else if (race == "Dwarf"){
             features = "Anão"
+        }else if (race == "Elf"){
+            
+        }else if (race == "Gnome"){
+            
+        }else if (race == "Half-Elf"){
+            
+        }else if (race == "Half-Orc"){
+            
+        }else if (race == "Halfling"){
+            
+        }else if (race == "Human"){
+            
         }
         return features;
     }
