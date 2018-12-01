@@ -13,3 +13,80 @@
  *= require_tree .
  *= require_self
  */
+ 
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+*{
+    margin:0;
+    padding:0;
+    font-family:'Montserrat', sans-serif;
+    font-size: 100%;
+}
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+form {
+  margin: 0 auto;
+  max-width: 850px;
+  padding: 20px 10px;
+  background-color: rgba(0,51,102,0.4)
+}
+
+.input {
+  float: left;
+  width: 48%;
+  padding: 0 1% 20px;
+  position: relative;
+}
+
+.input.txt { 
+    width: 98%; 
+}
+
+.input label {
+  display: block;
+  padding-bottom: 5px;
+  color: #666;
+}
+
+.input input,
+.input textarea {
+  padding-top: 10px;
+  padding-bottom: 9px;
+  border: none;
+  font-size: 1em;
+  font-weight: 100;
+  font-family: "Montserrat", sans-serif;
+}
+
+.input input {
+  width: 94%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.input textarea {
+  width: 97%;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+}
+
+.button .btn{
+    background-color: rgba(0,51,102,0.5);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+}
+
+@media screen and (max-width: 520px) {
+  .input {
+    width: 98%;
+  }
+}

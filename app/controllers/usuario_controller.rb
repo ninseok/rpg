@@ -19,8 +19,6 @@ class UsuarioController < ApplicationController
   private
 
     def user_params
-      # VAI LER OS CONTEUDOS ESCRITOS NOS CAMPOS DO FORM
-      params.require(:usuario).permit(:nome, :email, :password,
-                                   :password_confirmation)
+      params.require(:usuario).permit(:nome, :email, :password, :password_confirmation)
     end
 end

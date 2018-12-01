@@ -22,6 +22,6 @@ class LoginController < ApplicationController
   
     private 
     def login_params
-      params.require(:login).permit(:email, :password) #pode ser que mude
+      params.require(:login).permit(:email, :password)
     end
 end
