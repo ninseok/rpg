@@ -1,6 +1,6 @@
 
 <script type="text/javascript" >
-    function teste(){
+    function makeRace(){
         var features = document.getElementById('features');
         while (features.firstChild) {
             features.removeChild(features.firstChild);
@@ -8,30 +8,39 @@
         var formelement = document.createElement('p');
         var selectrace = document.getElementById('race');
         var optionrace = selectrace.options[selectrace.selectedIndex].value;
-        checaFeatures(optionrace);
+        checkRace(optionrace);
         features.appendChild(formelement);
         features.style.display = "block";
     }
     
-    function checaFeatures(race){
-        var divFeature = document.getElementById('features');
-        
-        if (race == "Dragonborn"){
-            dragonborn()
-        }else if (race == "Dwarf"){
-            features = "Anão"
-        }else if (race == "Elf"){
-            
-        }else if (race == "Gnome"){
-            
-        }else if (race == "Half-Elf"){
-            
-        }else if (race == "Half-Orc"){
-            
-        }else if (race == "Halfling"){
-            
-        }else if (race == "Human"){
-            
+    function checkRace(race){
+        if (race == "Dragonborn"){dragonborn()}
+        else if (race == "Dwarf"){dwarf()}
+        else if (race == "Elf"){elf()}
+        else if (race == "Gnome"){gnome()}
+        else if (race == "Half-Elf"){half_elf()}
+        else if (race == "Half-Orc"){half_orc}
+        else if (race == "Halfling"){halfing()}
+        else if (race == "Human"){human()}
+        //const barb = new barbarian(12,12,12,12,12)
+       // div_classes.innerHTML = barb.get_hit_dice()
+    }
+    function makeClass(){
+        //var div_classes = document.getElementById('div_classes')
+        //while (div_classes.firstChild) {
+        //    div_classes.removeChild(div_classes.firstChild);
+        //}
+        var selectClass = document.getElementById('class')
+        var optionClass = selectClass.options[selectClass.selectedIndex].value
+        checkClass(optionClass)
+    }
+    
+    function checkClass(optionclass){
+        if (optionclass == "Barbarian"){
+            var teste = document.getElementById('div_class')
+            teste.innerHTML="Barbarian"
+        }else{
+            document.getElementById('div_class').innerHTML="No Barbarian"
         }
     }
 </script>
@@ -42,8 +51,8 @@
 </style>
 <form>
     <label>Name:</label><input type="text"><br>
-    <label>Race:</label><select name="race" id="race" onChange="teste()">
-        <option value="Choose" default>Choose your class</option>
+    <label>Race:</label><select name="race" id="race" onChange="makeRace()">
+        <option value="Choose" default>. . .</option>
         <option value="Dragonborn">Dragonborn</option>
         <option value="Dwarf">Dwarf</option>
         <option value="Elf">Elf</option>
@@ -54,16 +63,23 @@
         <option value="Human">Human</option>
     </select><br>
     <div class="features" id="features">
-        <label>Aligment</label><select name="aligment">
-        <option value="lg">Lawful Good</option>
-        <option value="ng">Neutral Good</option>
-        <option value="cg">Chaotic Good</option>
-        <option value="ln">Lawful Neutral</option>
-        <option value="tn">True Neutral</option>
-        <option value="cn">Chaotic Neutral</option>
-        <option value="le">Lawful Evil</option>
-        <option value="ne">Neutral Evil</option>
-        <option value="ce">Chaotic Evil</option>
+        
+    </div>
+    <label>Class:</label><select name="class" id="class" onChange="makeClass()">
+        <option value="Choose" default>. . .</option>
+        <option value="Barbarian">Barbarian</option>
+        <option value="Bard">Bard</option>
+        <option value="Cleric">Cleric</option>
+        <option value="Druid">Druid</option>
+        <option value="Fighter">Fighter</option>
+        <option value="Monk">Monk</option>
+        <option value="Paladin">Paladin</option>
+        <option value="Ranger">Ranger</option>
+        <option value="Rogue">Rogue</option>
+        <option value="Sorcerer">Sorcerer</option>
+        <option value="Warlock">Warlock</option>
+        <option value="Wizard">Wizard</option>
     </select><br>
+    <div id="div_class">
     </div>
 </form>
