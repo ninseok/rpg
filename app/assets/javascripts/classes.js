@@ -1,4 +1,4 @@
-import 'items.js';
+import martialMeleWeapon from 'items.js';
 function barbarian(){
     var hit_dice = 12;
     var saving_throw = ['Strength','Constitution']
@@ -36,5 +36,5 @@ function barbarian(){
     new_element.appendChild(option)
     option.value = "Battleaxe"
     option.text = "Battleaxe"
-    var martial = martialMeleeWeapon()
+    martialMeleeWeapon()
 }

@@ -1,2 +1,0 @@
-class TbSpell < ApplicationRecord
-end

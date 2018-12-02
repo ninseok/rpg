@@ -12,30 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2018_12_01_181520) do
 
-  create_table "tb_classes", force: :cascade do |t|
-    t.integer "cd_class"
-    t.string "nm_class"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "tb_classes_spells", force: :cascade do |t|
-    t.integer "tb_classes_id"
-    t.integer "tb_spells_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["tb_classes_id"], name: "index_tb_classes_spells_on_tb_classes_id"
-    t.index ["tb_spells_id"], name: "index_tb_classes_spells_on_tb_spells_id"
-  end
-
-  create_table "tb_spells", force: :cascade do |t|
-    t.integer "cd_spells"
-    t.string "nm_spell"
-    t.integer "cd_level"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "usuarios", force: :cascade do |t|
     t.string "name"
     t.string "email"
