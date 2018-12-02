@@ -10,11 +10,11 @@
 		    section {
 	            margin-left: auto;
                 margin-right: auto;
-                border: 1px solid;
+                /*border: 1px solid;*/
                 width: 60%;
 		    }
 		    
-		    form{
+		    form {
 		        padding: 0;
 		        background-color: transparent;
 		    }
@@ -22,7 +22,7 @@
 		        width: 49%; 
 		        margin-top: 15%;
 		        float: right;
-		        border: 1px solid;
+		        /*border: 1px solid;*/
                 display: flex;
                 align-items: center;
 		    }
@@ -37,6 +37,19 @@
                 padding: 15px 32px;
 		    }
 		    
+		    .logoimg {
+		        display: block;
+		        margin-left: auto;
+                margin-right: auto;
+                width: 80%;
+		    }
+		    
+		    p {
+		        text-align: center;
+		        font-size: 1.2em;
+		        font-weight: bold;
+		    }
+		    
 		    @media screen and (max-width: 520px) {
                 section {
                     width: 98%;
@@ -45,8 +58,9 @@
 		</style>
 	</head>
 	<body>
-	    <h1> Index </h1>
 	    <section>
+	        <%= image_tag("dndlogo.png", alt: "Logo D&D", class: "logoimg") %>
+	        <p>Create your D&D character sheet!</p>
             <div>
                 <%= button_to "Sign In", login_path, :method => "get", class: "btn" %>
             </div>
