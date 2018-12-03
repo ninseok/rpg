@@ -27,8 +27,11 @@
           <%= f.label :password_confirmation, "Confirmation" %>
           <%= f.password_field :password_confirmation %>
         </div>
-        <div class="button">
-          <%= f.submit "Create my account", class: "btn" %>
+        <div class="buttonduo">
+          <%= f.submit "Create my account", class: "btnduo" %>
+        </div>
+        <div class="buttonduo">
+          <%= button_to "Back", root_path, :method => "get", class: "btnduo" %>
         </div>
         <% end %>
     </section>

@@ -16,18 +16,17 @@
 		    
 		    form {
 		        padding: 0;
+		        margin-top: 15%;
 		        background-color: transparent;
 		    }
-		    div {
+		    /*.buttonduo {
 		        width: 49%; 
-		        margin-top: 15%;
 		        float: right;
-		        /*border: 1px solid;*/
                 display: flex;
                 align-items: center;
 		    }
 		    
-		    .btn {
+		    .btnduo {
 		        display: block;
 		        margin-left: auto;
                 margin-right: auto;
@@ -35,7 +34,7 @@
                 border: none;
                 color: white;
                 padding: 15px 32px;
-		    }
+		    }*/
 		    
 		    p {
 		        text-align: center;
@@ -58,11 +57,11 @@
         <%= render 'layouts/header' %>
 	    <section>
 	        <p>Create your D&D character sheet!</p>
-            <div class="button">
-                <%= button_to "Sign In", login_path, :method => "get", class: "btn" %>
+            <div class="buttonduo">
+                <%= button_to "Sign In", login_path, :method => "get", class: "btnduo" %>
             </div>
-            <div class="button">
-                <%= button_to "Register", usuario_new_path, :method => "get", class: "btn" %>
+            <div class="buttonduo">
+                <%= button_to "Register", usuario_new_path, :method => "get", class: "btnduo" %>
             </div>
         </section>
 	</body>
