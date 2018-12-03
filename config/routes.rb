@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :user
   get 'sessions/new'
   get 'register_class/new'
   post 'register_class/create'
@@ -16,6 +17,7 @@ Rails.application.routes.draw do
   get 'usuario/show/:id' => "usuario#show", as: "usuario_show"
   post 'usuario/create'
   get 'sheet/new'
+  post 'sheet/create'
   root "application#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

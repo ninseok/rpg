@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_03_032823) do
+ActiveRecord::Schema.define(version: 2018_12_03_200112) do
 
   create_table "class_feature_tb_classes", force: :cascade do |t|
     t.integer "class_feature_id"
@@ -97,6 +97,21 @@ ActiveRecord::Schema.define(version: 2018_12_03_032823) do
     t.integer "cha"
     t.string "size"
     t.integer "speed"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sheets", force: :cascade do |t|
+    t.string "name"
+    t.string "race"
+    t.string "spec"
+    t.integer "level"
+    t.integer "str"
+    t.integer "dex"
+    t.integer "con"
+    t.integer "int"
+    t.integer "wis"
+    t.integer "cha"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

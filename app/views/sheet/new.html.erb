@@ -1,31 +1,57 @@
 <%= render 'layouts/header'%>
-<div>
-    <%= label_tag 'Name' %>
-    <%= text_field_tag :name%>
+<%= form_for(@sheet, url: sheet_create_path) do |f| %>
+<div class="input txt" style="">
+    <%= f.label :name %>
+    <%= f.text_field :name%>
 </div>
-<div>
-    <%= label_tag 'Race' %>
-    <%= select_tag 'race',options_from_collection_for_select(Race.all,:id,:name)%>
+<div class="input" style="">
+    <%= f.label :race %>
+    <%= f.select :race ,options_from_collection_for_select(Race.all,:id,:name)%>
 </div>
+<div class="input" style="">
+    <%= f.label :class%>
+    <%= f.select :spec,options_from_collection_for_select(TbClass.all,:id,:name)%>
+</div >
 
-<div>
-    <%= label_tag 'Strength'%>
-    <%= text_field_tag :str%>
+<div class="input" style="">
+    <%= f.label :str %>
+    <%= f.text_field :str%>
 </div>
+<div class="input" style="">
+    <%= f.label :dex %>
+    <%= f.text_field :dex%>
+</div>
+<div class="input" style="">
+    <%= f.label :con%>
+    <%= f.text_field :con%>
+</div>
+<div class="input" style="">
+    <%= f.label :int%>
+    <%= f.text_field :int%>
+</div>
+<div class="input" style="">
+    <%= f.label :wis%>
+    <%= f.text_field :wis%>
+</div>
+<div class="input" style="">
+    <%= f.label :cha%>
+    <%= f.text_field :cha%>
+</div class="input txt" style="">
 
-<div>
+
+<div class="input txt" style="">
     <%= label_tag 'Skill' %>
     <%= select_tag 'skill',options_from_collection_for_select(Skill.all,:id,:name)%>
 </div>
-<div>
+<div class="input txt" style="">
     <%= label_tag 'Proficiency' %>
     <%= select_tag 'proficiency',options_from_collection_for_select(Proficiency.all,:id,:name)%>
 </div>
-<div>
+<div class="input txt" style="">
     <%= label_tag 'Language '%>
     <%= select_tag 'lang',options_from_collection_for_select(Language.all,:id,:name)%>
-</div>
-<div>
-    <%= label_tag 'Class '%>
-    <%= select_tag 'class',options_from_collection_for_select(TbClass.all,:id,:name)%>
-</div>
+</div >
+                 <div class="button">
+                    <%= f.submit "Next", class: "btn" %>
+                </div>
+<%end%>
