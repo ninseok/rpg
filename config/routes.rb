@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   get 'race/show'
   post 'race/createFeature'
   post 'race/createLanguage'
-  get 'race/createProficiency'
-  get 'race/createSkill'
+  post 'race/createProficiency'
+  post 'race/createSkill'
   post 'auth' => "login#auth", as: "login_auth" 
   get 'login' => "login#login", as: "login"
   get 'logout' => "login#logout", as: "logout"

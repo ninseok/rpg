@@ -33,7 +33,7 @@ class RaceController < ApplicationController
     params.require(:feature).permit(:name,:level,:desc)
   end
   private def prof_params
-    params.require(:proficiency).permit(:name,:type,:desc)  
+    params.require(:proficiency).permit(:name,:category,:desc)  
   end
   
   private def lang_params
@@ -41,6 +41,6 @@ class RaceController < ApplicationController
   end
   
   private def skill_params
-    params.require(:skill).permit(:name,:atribute)
+    params.require(:skill).permit(:name,:attr)
   end
 end

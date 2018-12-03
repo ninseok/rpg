@@ -2,15 +2,15 @@
 	<nav>
 		<ul>
 			<li><a href="#section-1" class="icon-shop"><span>Language</span></a></li>
-			<li><a href="#section-2" class="icon-cup"><span>Skill</span></a></li>
+			<li><a href="#section-2" class="icon-cup"><span>Class Feature</span></a></li>
 			<li><a href="#section-3" class="icon-food"><span>Proficiency</span></a></li>
-			<li><a href="#section-4" class="icon-lab"><span>Class Feature</span></a></li>
-			<li><a href="#section-5" class="icon-truck"><span>Order</span></a></li>
+			<li><a href="#section-4" class="icon-lab"><span>Skill</span></a></li>
+			<!--<li><a href="#section-5" class="icon-truck"><span>Order</span></a></li>-->
 		</ul>
 	</nav>
 	<div class="content">
-	    <h2>Language</h2>
 		<section id="section-1">
+		    <h2>Language</h2>
 		    <%= form_for(@lang, url: race_createLanguage_path) do |f| %>
                   <div class="input" style="">
                     <%= f.label :name %>
@@ -40,14 +40,15 @@
             </div><% end %>
 		</section>
 		<section id="section-3">
-            <%= form_for(@prof, url: race_createProf_path) do |f| %>
+		    <h2>Proficiency</h2>
+            <%= form_for(@prof, url: race_createProficiency_path) do |f| %>
                   <div class="input">
                     <%= f.label :name %>
                     <%= f.text_field :name %>
                   </div>
                         <div class="input">
-                    <%= f.label :type %>
-                    <%= f.text_field :type %>
+                    <%= f.label :category %>
+                    <%= f.text_field :category %>
                   </div>
                 <div class="input">
                     <%= f.label :desc %>
@@ -58,36 +59,21 @@
             </div><% end %>
 		</section>
 		<section id="section-4">
-            <%= form_for(@skill, url: classe_createSkill_path) do |f| %>
+		    <h2>Skill</h2>
+            <%= form_for(@skill, url: race_createSkill_path) do |f| %>
                   <div class="input">
                     <%= f.label :name %>
                     <%= f.text_field :name %>
                   </div>
                         <div class="input">
-                    <%= f.label :atribute %>
-                    <%= f.text_field :atribute %>
+                    <%= f.label :attr %>
+                    <%= f.text_field :attr %>
                   </div>
                   <div class="button">
                     <%= f.submit "Login", class: "btn" %>
             </div><% end %>
 		</section>
-		<section id="section-5">
-			<div class="mediabox">
-				<img src="img/02.png" alt="img02" />
-				<h3>Radish Tomato</h3>
-				<p>Catsear cauliflower garbanzo yarrow salsify chicory garlic bell pepper napa cabbage lettuce tomato kale arugula melon sierra leone bologi rutabaga tigernut.</p>
-			</div>
-			<div class="mediabox">
-				<img src="img/06.png" alt="img06" />
-				<h3>Fennel Wasabi</h3>
-				<p>Sea lettuce gumbo grape kale kombu cauliflower salsify kohlrabi okra sea lettuce broccoli celery lotus root carrot winter purslane turnip greens garlic.</p>
-			</div>
-			<div class="mediabox">
-				<img src="img/01.png" alt="img01" />
-				<h3>Red Tofu Wrap</h3>
-				<p>Green horseradish azuki bean lettuce avocado asparagus okra. Kohlrabi radish okra azuki bean corn fava bean mustard tigernut wasabi tofu broccoli mixture soup.</p>
-			</div>
-		</section>
+
 	</div><!-- /content -->
 </div><!-- /tabs -->
 <script src="js/cbpFWTabs.js"></script>
