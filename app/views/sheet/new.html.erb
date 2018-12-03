@@ -1,8 +1,9 @@
 <script type="text/javascript">
     function mudaValor(){
-        var teste = document.getElementById('race')
-        <%= @value = document.getElementById('race')%> 
-        document.getElementById('str').value = <%= @value %>
+        var select = document.getElementById('race')
+        var option = select.options[select.selectedIndex].value
+        <%= @option %> = option
+        document.getElementById('str').value = option
     }
 </script>
 
