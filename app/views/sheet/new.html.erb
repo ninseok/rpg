@@ -1,14 +1,8 @@
-<script type="text/javascript">
-    function teste(){
-        var a = document.getElementById('race').value
-        var b = document.getElementById('str')
-        b.innerHTML = "<%= Race.find(a).str%>"
-    }
-</script>
+
 <%= render 'layouts/header'%>
 <div>
     <%= label_tag 'Race' %>
-    <%= select_tag 'race',options_from_collection_for_select(Race.all,:id,:name), :onchange => ('teste()')%>
+    <%= select_tag 'race',options_from_collection_for_select(Race.all,:id,:name)%>
 </div>
 
 <table>
@@ -22,5 +16,7 @@
           <td>0</td>
     </tr>
 </table>
-
+<%= table_for(Race) do |t|
+      t.data
+    end %>
 <%= select_tag 'lang',options_from_collection_for_select(Language.all,:id,:name)%>
