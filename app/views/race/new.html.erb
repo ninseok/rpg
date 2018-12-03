@@ -1,30 +1,23 @@
 <div id="tabs" class="tabs">
 	<nav>
 		<ul>
-			<li><a href="#section-1" class="icon-shop"><span>Shop</span></a></li>
-			<li><a href="#section-2" class="icon-cup"><span>Drinks</span></a></li>
-			<li><a href="#section-3" class="icon-food"><span>Food</span></a></li>
-			<li><a href="#section-4" class="icon-lab"><span>Lab</span></a></li>
+			<li><a href="#section-1" class="icon-shop"><span>Language</span></a></li>
+			<li><a href="#section-2" class="icon-cup"><span>Skill</span></a></li>
+			<li><a href="#section-3" class="icon-food"><span>Proficiency</span></a></li>
+			<li><a href="#section-4" class="icon-lab"><span>Class Feature</span></a></li>
 			<li><a href="#section-5" class="icon-truck"><span>Order</span></a></li>
 		</ul>
 	</nav>
 	<div class="content">
 		<section id="section-1">
-			<div class="mediabox">
-				<img src="img/01.png" alt="img01" />
-				<h3>Sushi Gumbo Beetroot</h3>
-				<p>Sushi gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.</p>
-			</div>
-			<div class="mediabox">
-				<img src="img/02.png" alt="img02" />
-				<h3>Pea Sprouts Fava Soup</h3>
-				<p>Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea.</p>
-			</div>
-			<div class="mediabox">
-				<img src="img/03.png" alt="img03" />
-				<h3>Turnip Broccoli Sashimi</h3>
-				<p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
-			</div>
+		    <%= form_for(@lang, url: race_createLanguage_path) do |f| %>
+                  <div class="input" style="">
+                    <%= f.label :name %>
+                    <%= f.text_field :name %>
+                  </div>
+                  <div class="button">
+                    <%= f.submit "Login", class: "btn" %>
+            </div><% end %>
 		</section>
 		<section id="section-2">
 			<div class="mediabox">
