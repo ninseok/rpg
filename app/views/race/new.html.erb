@@ -9,6 +9,7 @@
 		</ul>
 	</nav>
 	<div class="content">
+	    <h2>Language</h2>
 		<section id="section-1">
 		    <%= form_for(@lang, url: race_createLanguage_path) do |f| %>
                   <div class="input" style="">
@@ -16,42 +17,45 @@
                     <%= f.text_field :name %>
                   </div>
                   <div class="button">
-                    <%= f.submit "Login", class: "btn" %>
+                    <%= f.submit "New", class: "btn" %>
             </div><% end %>
 		</section>
 		<section id="section-2">
-			<div class="mediabox">
-				<img src="img/04.png" alt="img04" />
-				<h3>Asparagus Cucumber Cake</h3>
-				<p>Chickweed okra pea winter purslane coriander yarrow sweet pepper radish garlic brussels sprout groundnut summer purslane earthnut pea tomato spring onion azuki bean gourd. </p>
-			</div>
-			<div class="mediabox">
-				<img src="img/05.png" alt="img05" />
-				<h3>Magis Kohlrabi Gourd</h3>
-				<p>Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori. Grape wattle seed kombu beetroot horseradish carrot squash brussels sprout chard.</p>
-			</div>
-			<div class="mediabox">
-				<img src="img/06.png" alt="img06" />
-				<h3>Ricebean Rutabaga</h3>
-				<p>Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori. </p>
-			</div>
+		    <h2>Feature</h2>
+            <%= form_for(@feature, url: race_createFeature_path) do |f| %>
+                <div class="input">
+                    <%= f.label :name %>
+                    <%= f.text_field :name %>
+                </div>
+                <div class="input">
+                    <%= f.label :level %>
+                    <%= f.text_field :level %>
+                </div>
+                <div class="input">
+                    <%= f.label :desc %>
+                    <%= f.text_field :desc %>
+                </div>
+                  <div class="button">
+                    <%= f.submit "New", class: "btn" %>
+            </div><% end %>
 		</section>
 		<section id="section-3">
-			<div class="mediabox">
-				<img src="img/02.png" alt="img02" />
-				<h3>Noodle Curry</h3>
-				<p>Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea.Sushi gumbo beet greens corn soko endive gumbo gourd.</p>
-			</div>
-			<div class="mediabox">
-				<img src="img/06.png" alt="img06" />
-				<h3>Leek Wasabi</h3>
-				<p>Sushi gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.</p>
-			</div>
-			<div class="mediabox">
-				<img src="img/01.png" alt="img01" />
-				<h3>Green Tofu Wrap</h3>
-				<p>Pea horseradish azuki bean lettuce avocado asparagus okra. Kohlrabi radish okra azuki bean corn fava bean mustard tigernut wasabi tofu broccoli mixture soup.</p>
-			</div>
+            <%= form_for(@prof, url: race_createProf_path) do |f| %>
+                  <div class="input">
+                    <%= f.label :name %>
+                    <%= f.text_field :name %>
+                  </div>
+                        <div class="input">
+                    <%= f.label :type %>
+                    <%= f.text_field :type %>
+                  </div>
+                <div class="input">
+                    <%= f.label :desc %>
+                    <%= f.text_field :desc %>
+                </div>
+                  <div class="button">
+                    <%= f.submit "New", class: "btn" %>
+            </div><% end %>
 		</section>
 		<section id="section-4">
 			<div class="mediabox">
