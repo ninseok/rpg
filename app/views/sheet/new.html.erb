@@ -2,8 +2,7 @@
     function mudaValor(){
         var select = document.getElementById('race')
         var option = select.options[select.selectedIndex].value
-        <%= @option %> = option
-        document.getElementById('str').value = option
+        document.getElementById('str').value = gon.str[option]
     }
 </script>
 

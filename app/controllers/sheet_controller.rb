@@ -3,4 +3,12 @@ class SheetController < ApplicationController
     @lang = Language.new
     @race = Race.new
   end
+  
+  def teste
+    @cont = Race.last.id
+    for i in 0..@cont
+      @str << Race.find(i).str
+    end
+    gon.str = @str
+  end
 end
