@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
   get 'register_class/new'
   post 'register_class/create'
   get 'register_class/show'

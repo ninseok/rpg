@@ -1,9 +1,3 @@
-<script type="text/javascript">
-    function mudaValor(){
-
-    }
-</script>
-
 <%= render 'layouts/header'%>
 <div>
     <%= label_tag 'Name' %>
@@ -11,33 +5,14 @@
 </div>
 <div>
     <%= label_tag 'Race' %>
-    <%= select_tag 'race',options_from_collection_for_select(Race.all,:id,:name),:onchange =>'mudaValor()'%>
-</div>
-<div>
-        <%= label_tag 'Strength' %>
-        <%= text_field_tag :str%>
-</div>
-<div>
-        <%= label_tag 'Dexterity' %>
-        <%= text_field_tag :dex%>
+    <%= select_tag 'race',options_from_collection_for_select(Race.all,:id,:name)%>
 </div>
 
 <div>
-        <%= label_tag 'Constitution' %>
-        <%= text_field_tag :con%>    
+    <%= label_tag 'Strength'%>
+    <%= text_field_tag :str%>
 </div>
-<div>
-        <%= label_tag 'Intelligence' %>
-        <%= text_field_tag :int%> 
-</div>
-<div>
-        <%= label_tag 'Wisdom' %>
-        <%= text_field_tag :wis%>
-</div>
-<div>
-        <%= label_tag 'Charisma' %>
-        <%= text_field_tag :cha%>
-</div>
+
 <div>
     <%= label_tag 'Skill' %>
     <%= select_tag 'skill',options_from_collection_for_select(Skill.all,:id,:name)%>
@@ -49,4 +24,8 @@
 <div>
     <%= label_tag 'Language '%>
     <%= select_tag 'lang',options_from_collection_for_select(Language.all,:id,:name)%>
+</div>
+<div>
+    <%= label_tag 'Class '%>
+    <%= select_tag 'class',options_from_collection_for_select(TbClass.all,:id,:name)%>
 </div>
