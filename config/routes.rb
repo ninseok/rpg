@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'race/new'
+  get 'race/show'
+  get 'race/createFeature'
+  get 'race/createLanguage'
+  get 'race/createProficiency'
+  get 'race/createSkill'
   post 'auth' => "login#auth", as: "login_auth" 
   get 'login' => "login#login", as: "login"
   get 'logout' => "login#logout", as: "logout"

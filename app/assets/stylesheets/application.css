@@ -90,8 +90,18 @@ form {
     font-size: 1em;
 }
 
+.logoimg {
+		display: block;
+		margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
 @media screen and (max-width: 520px) {
   .input {
     width: 98%;
+  }
+  .logoimg {
+    width: 100%;
   }
 }

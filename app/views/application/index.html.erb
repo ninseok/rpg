@@ -37,13 +37,6 @@
                 padding: 15px 32px;
 		    }
 		    
-		    .logoimg {
-		        display: block;
-		        margin-left: auto;
-                margin-right: auto;
-                width: 100%;
-		    }
-		    
 		    p {
 		        text-align: center;
 		        font-size: 2em;
@@ -55,23 +48,18 @@
                 section {
                     width: 98%;
                 }
-                
-                .logoimg {
-                    width: 100%;
-                }
-                
                 p {
                     font-size: 1.2em;
-                }
+                }            
             }
 		</style>
 	</head>
 	<body>
 	    <header>
 	        <%= image_tag("dndlogored.png", alt: "Logo D&D", class: "logoimg") %>
-	        <p>Create your D&D character sheet!</p>
 	    </header>
 	    <section>
+	        <p>Create your D&D character sheet!</p>
             <div>
                 <%= button_to "Sign In", login_path, :method => "get", class: "btn" %>
             </div>
