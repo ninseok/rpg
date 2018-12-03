@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  class_feature: one
+  tb_class: one
+
+two:
+  class_feature: two
+  tb_class: two
