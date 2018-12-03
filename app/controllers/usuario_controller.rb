@@ -1,10 +1,16 @@
 class UsuarioController < ApplicationController
+  include LoginHelper
+  
   def new
     @user = Usuario.new
   end
 
   def show
-    @user = Usuario.find(params[:id])
+    if(logged_in?)
+      @user = Usuario.find(params[:id])
+    else
+      redirect_to root_path
+    end
   end
 
   def create

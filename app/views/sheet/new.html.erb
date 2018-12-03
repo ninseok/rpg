@@ -1,8 +1,6 @@
 <script type="text/javascript">
     function mudaValor(){
-        var select = document.getElementById('race')
-        var option = select.options[select.selectedIndex].value
-        document.getElementById('str').value = gon.str[option]
+
     }
 </script>
 
@@ -16,19 +14,39 @@
     <%= select_tag 'race',options_from_collection_for_select(Race.all,:id,:name),:onchange =>'mudaValor()'%>
 </div>
 <div>
-    <%= label_tag 'Strength' %>
-    <%= text_field_tag :str%>
-    <%= label_tag 'Dexterity' %>
-    <%= text_field_tag :dex, Race.find(1).dex%>
-    <%= label_tag 'Constitution' %>
-    <%= text_field_tag :con, Race.find(1).con%>
-    <%= label_tag 'Intelligence' %>
-    <%= text_field_tag :int, Race.find(1).int%>
-    <%= label_tag 'Strength' %>
-    <%= text_field_tag :wis, Race.find(1).wis%>
-    <%= label_tag 'Strength' %>
-    <%= text_field_tag :cha, Race.find(1).cha%>
+        <%= label_tag 'Strength' %>
+        <%= text_field_tag :str%>
+</div>
+<div>
+        <%= label_tag 'Dexterity' %>
+        <%= text_field_tag :dex%>
 </div>
 
-
-<%= select_tag 'lang',options_from_collection_for_select(Language.all,:id,:name)%>
+<div>
+        <%= label_tag 'Constitution' %>
+        <%= text_field_tag :con%>    
+</div>
+<div>
+        <%= label_tag 'Intelligence' %>
+        <%= text_field_tag :int%> 
+</div>
+<div>
+        <%= label_tag 'Wisdom' %>
+        <%= text_field_tag :wis%>
+</div>
+<div>
+        <%= label_tag 'Charisma' %>
+        <%= text_field_tag :cha%>
+</div>
+<div>
+    <%= label_tag 'Skill' %>
+    <%= select_tag 'skill',options_from_collection_for_select(Skill.all,:id,:name)%>
+</div>
+<div>
+    <%= label_tag 'Proficiency' %>
+    <%= select_tag 'proficiency',options_from_collection_for_select(Proficiency.all,:id,:name)%>
+</div>
+<div>
+    <%= label_tag 'Language '%>
+    <%= select_tag 'lang',options_from_collection_for_select(Language.all,:id,:name)%>
+</div>
