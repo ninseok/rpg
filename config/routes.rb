@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'register_class/new'
+  get 'register_class/create'
+  get 'register_class/show'
   get 'race/new'
   get 'race/show'
   post 'race/createFeature'
