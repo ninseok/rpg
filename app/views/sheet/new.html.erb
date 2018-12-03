@@ -4,7 +4,7 @@
     <%= f.label :name %>
     <%= f.text_field :name%>
 </div>
-<div class="input" style="">
+<div class="input txt" style="">
     <%= f.label :race %>
     <%= f.select :race ,options_from_collection_for_select(Race.all,:id,:name)%>
 </div>
@@ -12,7 +12,10 @@
     <%= f.label :class%>
     <%= f.select :spec,options_from_collection_for_select(TbClass.all,:id,:name)%>
 </div >
-
+<div class="input" style="">
+    <%= f.label :level%>
+    <%= f.text_field :level%>
+</div >
 <div class="input" style="">
     <%= f.label :str %>
     <%= f.text_field :str%>
@@ -36,20 +39,40 @@
 <div class="input" style="">
     <%= f.label :cha%>
     <%= f.text_field :cha%>
-</div class="input txt" style="">
-
-
-<div class="input txt" style="">
-    <%= label_tag 'Skill' %>
-    <%= select_tag 'skill',options_from_collection_for_select(Skill.all,:id,:name)%>
 </div>
-<div class="input txt" style="">
-    <%= label_tag 'Proficiency' %>
-    <%= select_tag 'proficiency',options_from_collection_for_select(Proficiency.all,:id,:name)%>
+
+<div class="input" style="">
+    <%= f.label :skill1 %>
+    <%= f.select :skill1 ,options_from_collection_for_select(Skill.all,:id,:name)%>
 </div>
-<div class="input txt" style="">
-    <%= label_tag 'Language '%>
-    <%= select_tag 'lang',options_from_collection_for_select(Language.all,:id,:name)%>
+<div class="input" style="">
+    <%= f.label :skill2 %>
+    <%= f.select :skill2 ,options_from_collection_for_select(Skill.all,:id,:name)%>
+</div>
+<div class="input " style="">
+    <%= f.label :skill3 %>
+    <%= f.select :skill3 ,options_from_collection_for_select(Skill.all,:id,:name)%>
+</div>
+<div class="input" style="">
+    <%= f.label :skill4 %>
+    <%= f.select :skill4 ,options_from_collection_for_select(Skill.all,:id,:name)%>
+</div>
+
+<div class="input" style="">
+    <%= f.label :prof1 %>
+    <%= f.select :prof1,options_from_collection_for_select(Proficiency.all,:id,:name)%>
+</div>
+<div class="input" style="">
+    <%= f.label :prof2 %>
+    <%= f.select :prof2,options_from_collection_for_select(Proficiency.all,:id,:name)%>
+</div>
+<div class="input" style="">
+    <%= f.label :lang1%>
+    <%= f.select :lang1,options_from_collection_for_select(Language.all,:id,:name)%>
+</div >
+<div class="input" style="">
+    <%= f.label :lang2%>
+    <%= f.select :lang2,options_from_collection_for_select(Language.all,:id,:name)%>
 </div >
                  <div class="button">
                     <%= f.submit "Next", class: "btn" %>
