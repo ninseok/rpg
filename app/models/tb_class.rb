@@ -1,0 +1,2 @@
+class TbClass < ApplicationRecord
+end

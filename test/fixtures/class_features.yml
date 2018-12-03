@@ -2,12 +2,10 @@
 
 one:
   name: MyString
-  hit_dice: 1
-  saving_throw1: MyString
-  saving_throw2: MyString
+  desc: MyString
+  level: 1
 
 two:
   name: MyString
-  hit_dice: 1
-  saving_throw1: MyString
-  saving_throw2: MyString
+  desc: MyString
+  level: 1
