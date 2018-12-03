@@ -13,3 +13,6 @@ Race.create([{name:'Dragonborn', str:2, dex:0, con:0, int:0 ,wis:0 ,cha:1, size:
 {name:'High-Elf', str:0, dex:2, con:0, int:1 ,wis:0 ,cha:0, size:'Medium', speed:30}])
 
 Skill.create([{name:'Acrobatics',attr:'dex'},{name:'Animal Handling',attr:'wis'}])
+
+Feature.create([{name:'Darkvision',level:1,desc:'You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cant discern color in darkness, only shades of gray.'}])
+
