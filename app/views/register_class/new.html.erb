@@ -1,1 +1,18 @@
 <%= render 'layouts/header'%>
+
+<%= form_for(@classfeature, url: register_class_create_path) do |f| %>
+                <div class="input txt" style="">
+                    <%= f.label :name %>
+                    <%= f.text_field :name%>
+                </div>
+                <div class="input txt" style="">
+                    <%= f.label :desc %>
+                    <%= f.text_field :desc%>
+                </div>
+                <div class="input txt" style="">
+                    <%= f.label :level %>
+                    <%= f.text_field :level%>
+                </div>
+                  <div class="button">
+                    <%= f.submit "New", class: "btn" %>
+</div><% end %>
