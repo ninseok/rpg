@@ -28,4 +28,19 @@ class RaceController < ApplicationController
       @skill = Skill.new(skill_params)
       @skill.save
   end
+  
+    private def feature_params
+    params.require(:feature).permit(:name,:level,:desc)
+  end
+  private def prof_params
+    params.require(:proficiency).permit(:name,:type,:desc)  
+  end
+  
+  private def lang_params
+    params.require(:language).permit(:name)
+  end
+  
+  private def skill_params
+    params.require(:skill).permit(:name,:atribute)
+  end
 end
