@@ -58,10 +58,10 @@
         <%= render 'layouts/header' %>
 	    <section>
 	        <p>Create your D&D character sheet!</p>
-            <div>
+            <div class="button">
                 <%= button_to "Sign In", login_path, :method => "get", class: "btn" %>
             </div>
-            <div>
+            <div class="button">
                 <%= button_to "Register", usuario_new_path, :method => "get", class: "btn" %>
             </div>
         </section>
