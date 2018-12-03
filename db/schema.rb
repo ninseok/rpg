@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_02_205812) do
+ActiveRecord::Schema.define(version: 2018_12_03_030538) do
+
+  create_table "class_features", force: :cascade do |t|
+    t.string "name"
+    t.string "desc"
+    t.integer "level"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "features", force: :cascade do |t|
     t.string "name"
@@ -87,6 +95,15 @@ ActiveRecord::Schema.define(version: 2018_12_02_205812) do
   create_table "skills", force: :cascade do |t|
     t.string "name"
     t.string "attr"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tb_classes", force: :cascade do |t|
+    t.string "name"
+    t.integer "hit_dice"
+    t.string "saving_throw1"
+    t.string "saving_throw2"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
