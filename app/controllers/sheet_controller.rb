@@ -8,6 +8,7 @@ class SheetController < ApplicationController
     @cont = Race.last.id
     for i in 0..@cont
       @str << Race.find(i).str
+      puts str[i]
     end
     gon.str = @str
   end
