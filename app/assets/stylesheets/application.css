@@ -15,7 +15,7 @@
  */
  
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
-*{
+* {
     margin:0;
     padding:0;
     font-family:'Montserrat', sans-serif;
@@ -27,7 +27,7 @@ body {
   color: #EEE9E9;
 }
 
-h1{
+h1 {
     text-align: center;
     text-transform: uppercase;
     font-size: 1.5em;
@@ -102,39 +102,39 @@ form {
 }
 
 .button .btn{
-    width:100%;
-    background-color: rgba(229, 11, 20, 0.4);
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.2em;
+  width:100%;
+  background-color: rgba(229, 11, 20, 0.4);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2em;
 }
 
 .logoimg {
-		display: block;
-		margin-left: auto;
-    margin-right: auto;
-    width: 100%;
+	display: block;
+	margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
 .buttonduo {
-		width: 49%; 
-	  float: right;
-    display: flex;
-    align-items: center;
+	width: 49%; 
+	float: right;
+  display: flex;
+  align-items: center;
 }
-		    
+	    
 .btnduo {
-	  display: block;
-	  margin-left: auto;
-    margin-right: auto;
-    background-color: rgba(229, 11, 20, 0.8);
-    border: none;
-    color: white;
-    padding: 15px 32px;
+	display: block;
+	margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(229, 11, 20, 0.8);
+  border: none;
+  color: white;
+  padding: 15px 32px;
 }
 
 .table {
@@ -167,7 +167,6 @@ td a {
   font-weight: bold;
   color: #EEE9E9;
   text-shadow: 1px 2px #c3090f;
-  color: #EEE9E9;
   border: 3px solid #EEE9E9;
   padding: 5px;
 }
