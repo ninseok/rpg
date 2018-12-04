@@ -14,13 +14,13 @@
             <%= f.label :name %>
             <%= f.text_field :name%>
         </div>
-        <div class="input txt">
+        <div class="input">
             <%= f.label :race %>
             <%= f.select :race, options_from_collection_for_select(Race.all,:id,:name)%>
         </div>
         <div class="input">
             <%= f.label :class%>
-            <%= f.select :spec,options_from_collection_for_select(TbClass.all,:id,:name)%>
+            <%= f.select :spec, options_from_collection_for_select(TbClass.all,:id,:name)%>
         </div>
         <div class="input">
             <%= f.label :level%>
@@ -52,21 +52,20 @@
         </div>
         <div class="input">
             <%= f.label :skill1 %>
-            <%= f.select :skill1 ,options_from_collection_for_select(Skill.all,:id,:name)%>
+            <%= f.select :skill1, options_from_collection_for_select(Skill.all,:id,:name)%>
         </div>
         <div class="input">
             <%= f.label :skill2 %>
-            <%= f.select :skill2 ,options_from_collection_for_select(Skill.all,:id,:name)%>
+            <%= f.select :skill2, options_from_collection_for_select(Skill.all,:id,:name)%>
         </div>
         <div class="input">
             <%= f.label :skill3 %>
-            <%= f.select :skill3 ,options_from_collection_for_select(Skill.all,:id,:name)%>
+            <%= f.select :skill3, options_from_collection_for_select(Skill.all,:id,:name)%>
         </div>
         <div class="input">
             <%= f.label :skill4 %>
-            <%= f.select :skill4 ,options_from_collection_for_select(Skill.all,:id,:name)%>
+            <%= f.select :skill4, options_from_collection_for_select(Skill.all,:id,:name)%>
         </div>
-        
         <div class="input">
             <%= f.label :prof1 %>
             <%= f.select :prof1,options_from_collection_for_select(Proficiency.all,:id,:name)%>

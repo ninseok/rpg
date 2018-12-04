@@ -102,6 +102,7 @@ form {
 }
 
 .button .btn{
+    width:100%;
     background-color: rgba(229, 11, 20, 0.4);
     border: none;
     color: white;
