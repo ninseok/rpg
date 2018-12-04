@@ -10,9 +10,21 @@ Race.create([{name:'Dragonborn', str:2, dex:0, con:0, int:0 ,wis:0 ,cha:1, size:
 {name:'Forest Gnome', str:0, dex:1, con:0, int:2 ,wis:0 ,cha:0, size:'Small', speed:25},
 {name:'Half-Elf', str:0, dex:1, con:0, int:0 ,wis:0 ,cha:2, size:'Medium', speed:30},
 {name:'Half-Orc', str:2, dex:0, con:1, int:0 ,wis:0 ,cha:0, size:'Medium', speed:30},
-{name:'High-Elf', str:0, dex:2, con:0, int:1 ,wis:0 ,cha:0, size:'Medium', speed:30}])
+{name:'High Elf', str:0, dex:2, con:0, int:1 ,wis:0 ,cha:0, size:'Medium', speed:30},
+{name:'Hill Dwarf',str:0,dex:0,con:2,int:0,wis:1,cha:0,size:'Medium',speed:25},
+{name:'Human',str:1,dex:1,con:1,int:1,wis:1,cha:1,size:'Medium',speed:30},
+{name:'Lightfoot Halfling',str:0,dex:2,con:0,int:0,wis:0,cha:1,size:'Small',speed:25},
+{name:'Mountain Dwarf',str:2,dex:0,con:2,int:0,wis:0,cha:0,size:'Medium',speed:25},
+{name:'Rock Gnome',str:0,dex:0,con:1,int:2,wis:0,cha:0,size:'Small',speed:25},
+{name:'Stout Halfling',str:0,dex:2,con:1,int:0,wis:0,cha:0,size:'Small',speed:25},
+{name:'Tiefling',str:0,dex:0,con:0,int:0,wis:1,cha:2,size:'Medium',speed:30},
+{name:'Wood Elf',str:0,dex:2,con:0,int:0,wis:0,cha:1,size:'Medium',speed:30},
+])
 
-Skill.create([{name:'Acrobatics',attr:'dex'},{name:'Animal Handling',attr:'wis'}])
+Skill.create([{name:'Acrobatics',attr:'dex'},{name:'Animal Handling',attr:'wis'},{name:'Arcana',attr:'int'},{name:'Athletics',attr:'str'},{name:'Deception',attr:'cha'},
+{name:'History',attr:'int'},{name:'Insight',attr:'wis'},{name:'Intimidation',attr:'Investigation'},{name:'Medicine',attr:'wis'},{name:'Nature',attr:'int'},{name:'Perception',attr:'wis'},
+{name:'Performance',attr:'cha'},{name:'Persuasion',attr:'cha'},{name:'Religion',attr:'int'},{name:'Sleight of Hand',attr:'dex'},{name:'Stealth',attr:'dex'},{name:'Survival',attr:'wis'}])
+
 
 Feature.create([{name:'Darkvision',level:1,desc:'You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cant discern color in darkness, only shades of gray.'}])
 
