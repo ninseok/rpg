@@ -38,6 +38,9 @@ Skill.create([{name:'Acrobatics',attr:'dex'},{name:'Animal Handling',attr:'wis'}
 {name:'History',attr:'int'},{name:'Insight',attr:'wis'},{name:'Intimidation',attr:'Investigation'},{name:'Medicine',attr:'wis'},{name:'Nature',attr:'int'},{name:'Perception',attr:'wis'},
 {name:'Performance',attr:'cha'},{name:'Persuasion',attr:'cha'},{name:'Religion',attr:'int'},{name:'Sleight of Hand',attr:'dex'},{name:'Stealth',attr:'dex'},{name:'Survival',attr:'wis'}])
 
+Language.create([{name:'Common'},{name:'Dwarvish'},{name:'Elvish'},{name:'Gnomish'},
+{name:'Goblin'},{name:'Halfling'},{name:'Orc'},{name:'Abyssal'},{name:'Celestial'},
+{name:'Draconic'},{name:'Deep Speech'},{name:'Infernal'},{name:'Primordial'},{name:'Sylvan'},{name:'Undercommon'}])
 
 Feature.create([{name:'Darkvision',level:1,desc:'You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cant discern color in darkness, only shades of gray.'}])
 
