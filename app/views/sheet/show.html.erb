@@ -16,4 +16,21 @@
 <h1><%=Skill.find_by(id: @setsheet.skill3.to_i).name %></h1>
 <h1><%=Skill.find_by(id: @setsheet.skill4.to_i).name %></h1>
 </fieldset>
+
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Aributo</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @skills.each do |sheet| %>
+        <tr>
+            <td><%= skill.name %></td>
+            <td><%= skill.attr %></td>
+         </tr>
+    <% end %>
+  </tbody>
+
 <h1>Classe:<%=TbClass.find_by(id: @setsheet.spec.to_i).name %></h1>
