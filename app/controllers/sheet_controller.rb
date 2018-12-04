@@ -23,6 +23,7 @@ class SheetController < ApplicationController
   end
   
   def show
+    @skills = Skill.all
   end
   
   def home

@@ -35,7 +35,7 @@ TbClass.create([{name:'Barbarian',hit_dice:12,saving_throw1:'str',saving_throw2:
 {name:'Wizard',hit_dice:6,saving_throw1:'int',saving_throw2:'wis'},])
 
 Skill.create([{name:'Acrobatics',attr:'dex'},{name:'Animal Handling',attr:'wis'},{name:'Arcana',attr:'int'},{name:'Athletics',attr:'str'},{name:'Deception',attr:'cha'},
-{name:'History',attr:'int'},{name:'Insight',attr:'wis'},{name:'Intimidation',attr:'Investigation'},{name:'Medicine',attr:'wis'},{name:'Nature',attr:'int'},{name:'Perception',attr:'wis'},
+{name:'History',attr:'int'},{name:'Insight',attr:'wis'},{name:'Intimidation',attr:'cha'},{name:'Investigation',attr:'int'},{name:'Medicine',attr:'wis'},{name:'Nature',attr:'int'},{name:'Perception',attr:'wis'},
 {name:'Performance',attr:'cha'},{name:'Persuasion',attr:'cha'},{name:'Religion',attr:'int'},{name:'Sleight of Hand',attr:'dex'},{name:'Stealth',attr:'dex'},{name:'Survival',attr:'wis'}])
 
 Language.create([{name:'Common'},{name:'Dwarvish'},{name:'Elvish'},{name:'Gnomish'},
