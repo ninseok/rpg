@@ -184,13 +184,17 @@ td a:hover {
 	overflow: hidden;
 }
 
+
+a {
+  text-decoration: none;
+}
+
 .menu a{
 	float: left;
 	display: block;
 	color: #EEE9E9;
 	text-align: center;
 	padding: 10px;
-	text-decoration: none;
 	text-transform: uppercase;
 	font-weight: bold;
 	border: 3px solid transparent;
