@@ -12,21 +12,29 @@ class RaceController < ApplicationController
   def createFeature
     @feature = Feature.new(feature_params)
     @feature.save
+    @user = Usuario.first
+    redirect_to usuario_show_path(@user)
   end
 
   def createLanguage
     @lang = Language.new(lang_params)
     @lang.save
+    @user = Usuario.first
+    redirect_to usuario_show_path(@user)
   end
 
   def createProficiency
     @prof = Proficiency.new(prof_params)
     @prof.save
+         @user = Usuario.first
+    redirect_to usuario_show_path(@user)
   end
 
   def createSkill
       @skill = Skill.new(skill_params)
       @skill.save
+           @user = Usuario.first
+    redirect_to usuario_show_path(@user)
   end
   
     private def feature_params
