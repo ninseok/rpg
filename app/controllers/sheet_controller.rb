@@ -10,8 +10,10 @@ class SheetController < ApplicationController
   end
   
   def create
+    @user = Usuario.first
     @sheet = Sheet.new(sheet_params)
     @sheet.save!
+    redirect_to usuario_show_path(@user)
   end
 
   
