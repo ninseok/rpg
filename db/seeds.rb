@@ -42,5 +42,6 @@ Language.create([{name:'Common'},{name:'Dwarvish'},{name:'Elvish'},{name:'Gnomis
 {name:'Goblin'},{name:'Halfling'},{name:'Orc'},{name:'Abyssal'},{name:'Celestial'},
 {name:'Draconic'},{name:'Deep Speech'},{name:'Infernal'},{name:'Primordial'},{name:'Sylvan'},{name:'Undercommon'}])
 
+Proficiency.create([{name:'Battleaxe',category:'Weapon',desc:'2 handed weapon'},{name:'Shield',category:'Weapon',desc:'+1 to CA'},{name:'Heavy Armor',category:'Armor',desc:'Heavy armor.'},{name:'Martial Weapon',category:'Weapon',desc:'You can use martial weapons.'} ])
 Feature.create([{name:'Darkvision',level:1,desc:'You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cant discern color in darkness, only shades of gray.'}])
 

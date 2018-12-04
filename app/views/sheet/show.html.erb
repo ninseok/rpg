@@ -27,18 +27,19 @@
 	</head>
 <body>
     <div class="table">
-        <div class = "sheetMiddle">
-            <div class = "nmChar"><%=@setsheet.name %>, the <%=Race.find_by(id: @setsheet.race.to_i).name %> <%=TbClass.find_by(id: @setsheet.spec.to_i).name %></h1></div>
-            <div class = "lvlChar">Level:<%=@setsheet.level %> </div> 
-            <% @hitdice = TbClass.find_by(id: @setsheet.spec.to_i).hit_dice%>
-            <div  class = "hpChar">Hp: <% if @setsheet.level == 1 %>
+        <div class="sheetMiddle">
+            <div class="nmChar"><%=@setsheet.name %>, the <%=Race.find_by(id: @setsheet.race.to_i).name %> <%=TbClass.find_by(id: @setsheet.spec.to_i).name %></h1></div>
+            <div class="lvlChar">Level:<%=@setsheet.level %> </div> 
+            <% @hitdice=TbClass.find_by(id: @setsheet.spec.to_i).hit_dice%>
+            <div  class="hpChar">Hp: <% if @setsheet.level == 1 %>
                 <%=@hitdice %>
                 <%else%>
                 <% @hitdice = @hitdice + ((@hitdice/2+1)*(@setsheet.level - 1))%>
                 <%= @hitdice %>
                 <%end%></div>
         </div>
-        <table class="tbSkill">
+        <br>
+        <table>
             <thead>
                 <tr>
                     <th></th>
@@ -66,7 +67,8 @@
             <% end %>
           </tbody>
         </table>
-        <table class="tbAttr">
+        <br>
+        <table>
             <thead>
                 <tr>
                     <th>Attribute</th>
