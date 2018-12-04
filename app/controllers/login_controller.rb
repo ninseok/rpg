@@ -6,7 +6,7 @@ class LoginController < ApplicationController
     @user = Usuario.find_by(email: @parametros[:email])
     if(@user && @user.authenticate(@parametros[:password]))
       log_in @user
-      redirect_to usuario_show_path(@user) #favor mudar dps
+      redirect_to usuario_show_path(@user)
     else
       redirect_to login_path
     end

@@ -69,12 +69,13 @@ form {
   font-family: "Montserrat", sans-serif;
 }
 
-.input select {
+.input.txt select {
   width: 100%;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
-.input input,
-.input select{
+.input input{
   width: 94%;
   padding-left: 3%;
   padding-right: 3%;
