@@ -138,21 +138,24 @@ form {
 }
 
 .table {
-	padding: 20px;
+	margin: 0 auto;
+  max-width: 850px;
+  padding: 20px 10px;
   background-color: rgba(229, 11, 20, 0.4);
+}
+
+table{
 	text-align: center;
-	width: 70%;
+	width: 100%;
 	border-collapse: collapse;
-	padding: 3%;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto;
 }
 
 th, td {
-	padding: 2%;
+	padding: 3%;
 }
 
-th{
+th {
   background-color: rgba(238, 233, 233, 0.5);
   text-transform: uppercase;
 }
@@ -215,8 +218,9 @@ td a:hover {
   }
   
   .table {
-    margin: 0;
-		padding: 5%;
+    width: 100%;
+    margin: 0 auto;
+		padding: 20px;
   }
   
   th, td {

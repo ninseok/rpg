@@ -7,98 +7,99 @@
 		<title>Home</title>
 		
 		<style>
-            .tbAttr{
+            /*.tbAttr{
                 width:30%;
-                float:left;
             }
             
             .tbSkill{
                 width:30%;
-                float:left;
-            }
+            }*/
             
             tbody tr:nth-child(odd){
                 background-color:#eb7a83;
                 color:black;
             }
             
-            .sheetMiddle{
+            /*.sheetMiddle{
                 width:30%;
-                float:left;
-            }
+            }*/
         </style>
 	</head>
 <body>
     <div class="table">
-<table class="tbSkill">
-    <thead>
-        <tr>
-            <th></th>
-            <th>SKILLS</th>
-            <th></th>
-        </tr>
-        <tr>
-            <th>Proficiency</th>
-            <th>Name</th>
-            <th>Attribute</th>
-            <th></th>
-        </tr>
-    </thead>
-  <tbody>
-    <% @skills.each do |skills| %>
-        <tr>
-            <td><%if @setsheet.skill1.to_i == skills.id || @setsheet.skill2.to_i == skills.id || @setsheet.skill3.to_i == skills.id || @setsheet.skill4.to_i == skills.id %>
-                yes
-                <% else %>
-                no
-                <% end %>
-            </td>
-            <td><%= skills.name %></td>
-            <td><%= skills.attr %></td>
-         </tr>
-    <% end %>
-  </tbody>
-</table>
-<div class = "sheetMiddle">
-   <div class = "nmChar"><%=@setsheet.name %>, the <%=Race.find_by(id: @setsheet.race.to_i).name %> <%=TbClass.find_by(id: @setsheet.spec.to_i).name %></h1></div>
-    <div class = "lvlChar">Level:<%=@setsheet.level %> </div> 
-    <div  class = "hpChar">Hp: <%=TbClass.find_by(id: @setsheet.spec.to_i).hit_dice %></div>
-</div>
-
-    <table class="tbAttr">
-        <thead>
-            <tr>
-                <th>Attribute</th>
-                <th>Value</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Strength</td>
-                <td><%= @vl_str = @setsheet.str + Race.find_by(id: @setsheet.race).str %></td>
-            </tr>
-            <tr>
-                <td>Dexterity</td>
-                <td><%= @vl_dex = @setsheet.dex + Race.find_by(id: @setsheet.race).dex %></td>
-            </tr>
-            <tr>
-                <td>Constitution</td>
-                <td><%= @vl_con = @setsheet.con + Race.find_by(id: @setsheet.race).con %></td>
-            </tr>
-            <tr>
-                <td>Intelligence</td>
-                <td><%= @vl_int = @setsheet.int + Race.find_by(id: @setsheet.race).int %></td>
-            </tr>            
-            <tr>
-                <td>Wisdom</td>
-                <td><%= @vl_wis = @setsheet.wis + Race.find_by(id: @setsheet.race).wis %></td>
-            </tr>            
-            <tr>
-                <td>Charisma</td>
-                <td><%= @vl_cha = @setsheet.cha + Race.find_by(id: @setsheet.race).cha %></td>
-            </tr>
-        </tbody>
-    </table>
+        <div class = "sheetMiddle">
+            <div class = "nmChar"><%=@setsheet.name %>, the <%=Race.find_by(id: @setsheet.race.to_i).name %> <%=TbClass.find_by(id: @setsheet.spec.to_i).name %></h1></div>
+            <div class = "lvlChar">Level:<%=@setsheet.level %> </div> 
+            <% @hitdice = TbClass.find_by(id: @setsheet.spec.to_i).hit_dice%>
+            <div  class = "hpChar">Hp: <% if @setsheet.level == 1 %>
+                <%=@hitdice %>
+                <%else%>
+                <% @hitdice = @hitdice + ((@hitdice/2+1)*(@setsheet.level - 1))%>
+                <%= @hitdice %>
+                <%end%></div>
+        </div>
+        <table class="tbSkill">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>SKILLS</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>Proficiency</th>
+                    <th>Name</th>
+                    <th>Attribute</th>
+                </tr>
+            </thead>
+          <tbody>
+            <% @skills.each do |skills| %>
+                <tr>
+                    <td><%if @setsheet.skill1.to_i == skills.id || @setsheet.skill2.to_i == skills.id || @setsheet.skill3.to_i == skills.id || @setsheet.skill4.to_i == skills.id %>
+                        yes
+                        <% else %>
+                        no
+                        <% end %>
+                    </td>
+                    <td><%= skills.name %></td>
+                    <td><%= skills.attr %></td>
+                 </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <table class="tbAttr">
+            <thead>
+                <tr>
+                    <th>Attribute</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Strength</td>
+                    <td><%= @vl_str = @setsheet.str + Race.find_by(id: @setsheet.race).str %></td>
+                </tr>
+                <tr>
+                    <td>Dexterity</td>
+                    <td><%= @vl_dex = @setsheet.dex + Race.find_by(id: @setsheet.race).dex %></td>
+                </tr>
+                <tr>
+                    <td>Constitution</td>
+                    <td><%= @vl_con = @setsheet.con + Race.find_by(id: @setsheet.race).con %></td>
+                </tr>
+                <tr>
+                    <td>Intelligence</td>
+                    <td><%= @vl_int = @setsheet.int + Race.find_by(id: @setsheet.race).int %></td>
+                </tr>            
+                <tr>
+                    <td>Wisdom</td>
+                    <td><%= @vl_wis = @setsheet.wis + Race.find_by(id: @setsheet.race).wis %></td>
+                </tr>            
+                <tr>
+                    <td>Charisma</td>
+                    <td><%= @vl_cha = @setsheet.cha + Race.find_by(id: @setsheet.race).cha %></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
 </html>

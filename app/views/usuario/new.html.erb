@@ -7,6 +7,12 @@
 		<title>Register</title>
 	</head>
 	<body>
+	  <style>
+	    .new_usuario{
+	      margin-top:0;
+	      background-color:red;
+	    }
+	  </style>
 	  <%= render 'layouts/header' %>
     <h1>Register</h1>
     <section>
@@ -29,10 +35,7 @@
         </div>
         <div class="buttonduo">
           <%= f.submit "Create my account", class: "btnduo" %>
-        </div>
-        <div class="buttonduo">
-          <%= button_to "Back", root_path, :method => "get", class: "btnduo" %>
-        </div>
+        </div>>
         <% end %>
     </section>
   </body>

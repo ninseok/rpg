@@ -15,7 +15,6 @@
 		    
 		    form {
 		        padding: 0;
-		        margin-top: 15%;
 		        background-color: transparent;
 		    }
 		    
@@ -38,14 +37,57 @@
 	</head>
 	<body>
         <%= render 'layouts/header' %>
-	    <section>
-	        <p>Create your D&D character sheet!</p>
-            <div class="buttonduo">
-                <%= button_to "Sign In", login_path, :method => "get", class: "btnduo" %>
-            </div>
-            <div class="buttonduo">
-                <%= button_to "Register", usuario_new_path, :method => "get", class: "btnduo" %>
-            </div>
-        </section>
+        <div id="tabs" class="tabs">
+	<nav>
+		<ul>
+			<li><a href="#section-1"><span>Register</span></a></li>
+			<li><a href="#section-2"><span>Login</span></a></li>
+		</ul>
+	</nav>
+	<div class="content">
+		<section id="section-1">
+			 <%= form_for(@user, url: usuario_create_path) do |f| %>
+		        <div class="input txt">
+		          <%= f.label :name %>
+		          <%= f.text_field :name %>
+		        </div>
+		        <div class="input txt">
+		          <%= f.label :email %>
+		          <%= f.email_field :email %>
+		        </div>
+		        <div class="input">
+		          <%= f.label :password %>
+		          <%= f.password_field :password %>
+		        </div>
+		        <div class="input">
+		          <%= f.label :password_confirmation, "Confirmation" %>
+		          <%= f.password_field :password_confirmation %>
+		        </div>
+		        <div class="button">
+		          <%= f.submit "Create my account", class: "btnduo" %>
+		        </div>
+		     <% end %>
+		</section>
+		<section id="section-2">
+			      <%= form_for(:login, url: login_auth_path) do |f| %>
+				      <div class="input">
+				        <%= f.label :email %>
+				        <%= f.email_field :email %>
+				      </div>
+				      <div class="input">
+				        <%= f.label :password %>
+				        <%= f.password_field :password %>
+				      </div>
+				      <div class="button">
+				        <%= f.submit "Login", class: "btnduo" %>
+				      </div>
+				  <% end %>
+		</section>
+	</div><!-- /content -->
+</div><!-- /tabs -->
+<script src="js/cbpFWTabs.js"></script>
+<script>
+	new CBPFWTabs( document.getElementById( 'tabs' ) );
+</script>
 	</body>
 </html>
