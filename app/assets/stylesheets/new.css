@@ -1,5 +1,3 @@
-
-
 .tabs {
 	position: relative;
 	width: 100%;
@@ -54,7 +52,7 @@
 }
 
 .tabs nav a {
-	color: #becbd2;
+	color: #c3090f;
 	display: block;
 	font-size: 1.45em;
 	line-height: 2.5;
@@ -67,7 +65,7 @@
 }
 
 .tabs nav li.tab-current a {
-	color: #47a3da;
+	color: #c3090f;
 }
 
 
@@ -95,7 +93,7 @@
 .no-js .content section {
 	display: block;
 	padding-bottom: 2em;
-	border-bottom: 1px solid #e50b14;
+	border-bottom: 1px solid #c3090f;
 }
 
 .content section.content-current {
