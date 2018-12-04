@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :user
   get 'sessions/new'
   get 'register_class/new'
   post 'register_class/create'

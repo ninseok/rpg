@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_03_200112) do
+ActiveRecord::Schema.define(version: 2018_12_04_004634) do
 
   create_table "class_feature_tb_classes", force: :cascade do |t|
     t.integer "class_feature_id"
@@ -122,6 +122,8 @@ ActiveRecord::Schema.define(version: 2018_12_03_200112) do
     t.integer "lang2"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "usuario_id"
+    t.index ["usuario_id"], name: "index_sheets_on_usuario_id"
   end
 
   create_table "skills", force: :cascade do |t|

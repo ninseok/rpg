@@ -69,6 +69,10 @@ form {
   font-family: "Montserrat", sans-serif;
 }
 
+.input select {
+  width: 100%;
+}
+
 .input input,
 .input select{
   width: 94%;
