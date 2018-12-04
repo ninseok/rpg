@@ -6,7 +6,7 @@ class UsuarioController < ApplicationController
   end
 
   def show
-     @sheets = Sheet.all
+    @sheets = Sheet.all
     if(logged_in?)
       @user = Usuario.find(params[:id])
     else

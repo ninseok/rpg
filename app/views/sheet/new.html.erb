@@ -8,11 +8,15 @@
 	</head>
 	<body>
         <%= render 'layouts/header'%>
-        
+        <h1>New Sheet</h1>
         <%= form_for(@sheet, url: sheet_create_path) do |f| %>
-        <div class="input txt">
+        <div class="input">
             <%= f.label :name %>
             <%= f.text_field :name%>
+        </div>
+        <div class="input">
+            <%= f.label :level%>
+            <%= f.text_field :level%>
         </div>
         <div class="input">
             <%= f.label :race %>
@@ -21,10 +25,6 @@
         <div class="input">
             <%= f.label :class%>
             <%= f.select :spec, options_from_collection_for_select(TbClass.all,:id,:name)%>
-        </div>
-        <div class="input">
-            <%= f.label :level%>
-            <%= f.text_field :level%>
         </div>
         <div class="input">
             <%= f.label :str %>

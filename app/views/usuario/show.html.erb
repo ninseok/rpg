@@ -8,7 +8,6 @@
 		
 		<style>
 		    .menu {
-            	/* background-color: #3399FF; */
             	overflow: hidden;
             }
             
@@ -27,12 +26,6 @@
             	transition-timing-function: ease-out;
             }
             
-            #selected{
-            	color: #004d99;
-            	border: 3px solid #004d99;
-            }
-            
-            /* MENU HOVER*/
             .menu a:last-child:hover,
             .menu a:last-child:focus{
             	border: 3px solid transparent;
@@ -41,11 +34,10 @@
             
             .menu a:hover,
             .menu a:focus {
-            	color: #004d99;
-            	border: 3px solid #004d99;
+            	color: #c3090f;
+            	border: 3px solid #c3090f;
             }
-            
-            /* HIDE MENU ICON */
+
             .menu .icon {
             	display: none;
             }
@@ -103,16 +95,17 @@
 	</head>
     <body>
         <div class="menu" id="myMenu">
-    		<a href="#">My Sheets</a>
+    		<%= link_to 'My Sheets', usuario_show_path %>
     		<%= link_to 'New Sheet', sheet_new_path %>
     		<%= link_to 'Logout', logout_path %>
     		<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 	    </div>
         
         <h1>Usuario: <%= @user.name %></h1>
-        <h2>E-mail: <%= @user.email %></h2>
-        
-        <%= render 'sheet/home'%>
+
+        <div class="table">
+            <%= render 'sheet/home' %>
+        </div>
         <script>
     		/* Toggle between adding and removing the "responsive" class to menu when the user clicks on the icon */
     		function myFunction() {

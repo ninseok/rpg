@@ -11,9 +11,7 @@ class SheetController < ApplicationController
   
   def create
     @sheet = Sheet.new(sheet_params)
-       if (@sheet.save)
-         redirect_to sheet_home_path
-       end
+    @sheet.save!
   end
 
   

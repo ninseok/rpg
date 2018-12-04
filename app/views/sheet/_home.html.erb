@@ -4,7 +4,7 @@
     <tr>
       <th>Id</th>
       <th>Name</th>
-      <th colspan="2"></th>
+      <th></th>
     </tr>
   </thead>
 
@@ -14,7 +14,6 @@
         <td><%= sheet.id %></td>
         <td><%= sheet.name %></td>
         <td><%= link_to 'Show', sheet_show_path(sheet) %></td>
-        <td><%= link_to 'Delete' %></td>
       </tr>
     <% end %>
   </tbody>
