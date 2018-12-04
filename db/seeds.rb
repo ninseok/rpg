@@ -21,6 +21,19 @@ Race.create([{name:'Dragonborn', str:2, dex:0, con:0, int:0 ,wis:0 ,cha:1, size:
 {name:'Wood Elf',str:0,dex:2,con:0,int:0,wis:0,cha:1,size:'Medium',speed:30},
 ])
 
+TbClass.create([{name:'Barbarian',hit_dice:12,saving_throw1:'str',saving_throw2:'con'},
+{name:'Bard',hit_dice:8,saving_throw1:'dex',saving_throw2:'cha'},
+{name:'Cleric',hit_dice:8,saving_throw1:'wis',saving_throw2:'cha'},
+{name:'Druid',hit_dice:8,saving_throw1:'int',saving_throw2:'wis'},
+{name:'Fighter',hit_dice:10,saving_throw1:'str',saving_throw2:'con'},
+{name:'Monk',hit_dice:8,saving_throw1:'dex',saving_throw2:'con'},
+{name:'Paladin',hit_dice:10,saving_throw1:'str',saving_throw2:'cha'},
+{name:'Ranger',hit_dice:10,saving_throw1:'dex',saving_throw2:'wis'},
+{name:'Rogue',hit_dice:8,saving_throw1:'dex',saving_throw2:'int'},
+{name:'Sorcerer',hit_dice:6,saving_throw1:'cha',saving_throw2:'wis'},
+{name:'Warlock',hit_dice:8,saving_throw1:'cha',saving_throw2:'wis'},
+{name:'Wizard',hit_dice:6,saving_throw1:'int',saving_throw2:'wis'},])
+
 Skill.create([{name:'Acrobatics',attr:'dex'},{name:'Animal Handling',attr:'wis'},{name:'Arcana',attr:'int'},{name:'Athletics',attr:'str'},{name:'Deception',attr:'cha'},
 {name:'History',attr:'int'},{name:'Insight',attr:'wis'},{name:'Intimidation',attr:'Investigation'},{name:'Medicine',attr:'wis'},{name:'Nature',attr:'int'},{name:'Perception',attr:'wis'},
 {name:'Performance',attr:'cha'},{name:'Persuasion',attr:'cha'},{name:'Religion',attr:'int'},{name:'Sleight of Hand',attr:'dex'},{name:'Stealth',attr:'dex'},{name:'Survival',attr:'wis'}])
