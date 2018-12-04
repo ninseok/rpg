@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   post 'usuario/create'
   get 'sheet/new'
   post 'sheet/create'
+  get 'sheet/home'
+  get 'sheet/show/:id' => "sheet#show", as: "sheet_show"
   root "application#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

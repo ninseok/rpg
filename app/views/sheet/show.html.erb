@@ -1,0 +1,19 @@
+<h1>Name:<%=@setsheet.name %></h1>
+<h1>Race:<%=Race.find_by(id: @setsheet.race.to_i).name %></h1>
+<h1>Level:<%=@setsheet.level %> </h1>
+<div>
+    <h1>Strength: <%= @vl_str = @setsheet.str + Race.find_by(id: @setsheet.race).str %></h1>
+    <h1>Dexterity: <%= @vl_dex = @setsheet.dex + Race.find_by(id: @setsheet.race).dex %></h1>
+    <h1>Constitution: <%= @vl_con = @setsheet.con + Race.find_by(id: @setsheet.race).con %></h1>
+    <h1>Intelligence: <%= @vl_int = @setsheet.int + Race.find_by(id: @setsheet.race).int %></h1>
+    <h1>Wisdom: <%= @vl_wis = @setsheet.wis + Race.find_by(id: @setsheet.race).wis %></h1>
+    <h1>Charisma: <%= @vl_cha = @setsheet.cha + Race.find_by(id: @setsheet.race).cha %></h1>
+</div>
+<fieldset>
+    <legend>Skill</legend>
+    <h1><%=Skill.find_by(id: @setsheet.skill1.to_i).name %></h1>
+<h1><%=Skill.find_by(id: @setsheet.skill2.to_i).name %></h1>
+<h1><%=Skill.find_by(id: @setsheet.skill3.to_i).name %></h1>
+<h1><%=Skill.find_by(id: @setsheet.skill4.to_i).name %></h1>
+</fieldset>
+<h1>Classe:<%=TbClass.find_by(id: @setsheet.spec.to_i).name %></h1>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_03_202931) do
+ActiveRecord::Schema.define(version: 2018_12_03_200112) do
 
   create_table "class_feature_tb_classes", force: :cascade do |t|
     t.integer "class_feature_id"
@@ -103,8 +103,8 @@ ActiveRecord::Schema.define(version: 2018_12_03_202931) do
 
   create_table "sheets", force: :cascade do |t|
     t.string "name"
-    t.string "race"
-    t.string "spec"
+    t.integer "race"
+    t.integer "spec"
     t.integer "level"
     t.integer "str"
     t.integer "dex"
@@ -112,16 +112,16 @@ ActiveRecord::Schema.define(version: 2018_12_03_202931) do
     t.integer "int"
     t.integer "wis"
     t.integer "cha"
+    t.integer "skill1"
+    t.integer "skill2"
+    t.integer "skill3"
+    t.integer "skill4"
+    t.integer "prof1"
+    t.integer "prof2"
+    t.integer "lang1"
+    t.integer "lang2"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "skill1"
-    t.string "skill2"
-    t.string "skill3"
-    t.string "skill4"
-    t.string "prof1"
-    t.string "prof2"
-    t.string "lang1"
-    t.string "lang2"
   end
 
   create_table "skills", force: :cascade do |t|
