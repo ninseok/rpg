@@ -1,80 +1,91 @@
-<%= render 'layouts/header'%>
-<%= form_for(@sheet, url: sheet_create_path) do |f| %>
-<div class="input txt" style="">
-    <%= f.label :name %>
-    <%= f.text_field :name%>
-</div>
-<div class="input txt" style="">
-    <%= f.label :race %>
-    <%= f.select :race ,options_from_collection_for_select(Race.all,:id,:name)%>
-</div>
-<div class="input" style="">
-    <%= f.label :class%>
-    <%= f.select :spec,options_from_collection_for_select(TbClass.all,:id,:name)%>
-</div >
-<div class="input" style="">
-    <%= f.label :level%>
-    <%= f.text_field :level%>
-</div >
-<div class="input" style="">
-    <%= f.label :str %>
-    <%= f.text_field :str%>
-</div>
-<div class="input" style="">
-    <%= f.label :dex %>
-    <%= f.text_field :dex%>
-</div>
-<div class="input" style="">
-    <%= f.label :con%>
-    <%= f.text_field :con%>
-</div>
-<div class="input" style="">
-    <%= f.label :int%>
-    <%= f.text_field :int%>
-</div>
-<div class="input" style="">
-    <%= f.label :wis%>
-    <%= f.text_field :wis%>
-</div>
-<div class="input" style="">
-    <%= f.label :cha%>
-    <%= f.text_field :cha%>
-</div>
-
-<div class="input" style="">
-    <%= f.label :skill1 %>
-    <%= f.select :skill1 ,options_from_collection_for_select(Skill.all,:id,:name)%>
-</div>
-<div class="input" style="">
-    <%= f.label :skill2 %>
-    <%= f.select :skill2 ,options_from_collection_for_select(Skill.all,:id,:name)%>
-</div>
-<div class="input " style="">
-    <%= f.label :skill3 %>
-    <%= f.select :skill3 ,options_from_collection_for_select(Skill.all,:id,:name)%>
-</div>
-<div class="input" style="">
-    <%= f.label :skill4 %>
-    <%= f.select :skill4 ,options_from_collection_for_select(Skill.all,:id,:name)%>
-</div>
-
-<div class="input" style="">
-    <%= f.label :prof1 %>
-    <%= f.select :prof1,options_from_collection_for_select(Proficiency.all,:id,:name)%>
-</div>
-<div class="input" style="">
-    <%= f.label :prof2 %>
-    <%= f.select :prof2,options_from_collection_for_select(Proficiency.all,:id,:name)%>
-</div>
-<div class="input" style="">
-    <%= f.label :lang1%>
-    <%= f.select :lang1,options_from_collection_for_select(Language.all,:id,:name)%>
-</div >
-<div class="input" style="">
-    <%= f.label :lang2%>
-    <%= f.select :lang2,options_from_collection_for_select(Language.all,:id,:name)%>
-</div >
-                 <div class="button">
-                    <%= f.submit "Next", class: "btn" %>
-                </div>
-<%end%>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Register</title>
+	</head>
+	<body>
+        <%= render 'layouts/header'%>
+        <%= form_for(@sheet, url: sheet_create_path) do |f| %>
+        <div class="input txt" style="">
+            <%= f.label :name %>
+            <%= f.text_field :name%>
+        </div>
+        <div class="input txt" style="">
+            <%= f.label :race %>
+            <%= f.select :race ,options_from_collection_for_select(Race.all,:id,:name)%>
+        </div>
+        <div class="input" style="">
+            <%= f.label :class%>
+            <%= f.select :spec,options_from_collection_for_select(TbClass.all,:id,:name)%>
+        </div >
+        <div class="input" style="">
+            <%= f.label :level%>
+            <%= f.text_field :level%>
+        </div>
+        <div class="input" style="">
+            <%= f.label :str %>
+            <%= f.text_field :str%>
+        </div>
+        <div class="input" style="">
+            <%= f.label :dex %>
+            <%= f.text_field :dex%>
+        </div>
+        <div class="input" style="">
+            <%= f.label :con%>
+            <%= f.text_field :con%>
+        </div>
+        <div class="input" style="">
+            <%= f.label :int%>
+            <%= f.text_field :int%>
+        </div>
+        <div class="input" style="">
+            <%= f.label :wis%>
+            <%= f.text_field :wis%>
+        </div>
+        <div class="input" style="">
+            <%= f.label :cha%>
+            <%= f.text_field :cha%>
+        </div>
+        
+        <div class="input" style="">
+            <%= f.label :skill1 %>
+            <%= f.select :skill1 ,options_from_collection_for_select(Skill.all,:id,:name)%>
+        </div>
+        <div class="input" style="">
+            <%= f.label :skill2 %>
+            <%= f.select :skill2 ,options_from_collection_for_select(Skill.all,:id,:name)%>
+        </div>
+        <div class="input " style="">
+            <%= f.label :skill3 %>
+            <%= f.select :skill3 ,options_from_collection_for_select(Skill.all,:id,:name)%>
+        </div>
+        <div class="input" style="">
+            <%= f.label :skill4 %>
+            <%= f.select :skill4 ,options_from_collection_for_select(Skill.all,:id,:name)%>
+        </div>
+        
+        <div class="input" style="">
+            <%= f.label :prof1 %>
+            <%= f.select :prof1,options_from_collection_for_select(Proficiency.all,:id,:name)%>
+        </div>
+        <div class="input" style="">
+            <%= f.label :prof2 %>
+            <%= f.select :prof2,options_from_collection_for_select(Proficiency.all,:id,:name)%>
+        </div>
+        <div class="input" style="">
+            <%= f.label :lang1%>
+            <%= f.select :lang1,options_from_collection_for_select(Language.all,:id,:name)%>
+        </div>
+        <div class="input" style="">
+            <%= f.label :lang2%>
+            <%= f.select :lang2,options_from_collection_for_select(Language.all,:id,:name)%>
+        </div>
+        <div class="button">
+            <%= f.submit "Next", class: "btn" %>
+        </div>
+        <%end%>
+    </body>
+</html>

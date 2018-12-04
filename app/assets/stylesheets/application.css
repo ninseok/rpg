@@ -59,7 +59,8 @@ form {
 }
 
 .input input,
-.input textarea {
+.input textarea,
+.input select{
   padding-top: 10px;
   padding-bottom: 9px;
   border: none;
@@ -68,7 +69,8 @@ form {
   font-family: "Montserrat", sans-serif;
 }
 
-.input input {
+.input input,
+.input select{
   width: 94%;
   padding-left: 3%;
   padding-right: 3%;
