@@ -161,14 +161,15 @@ th{
   text-transform: uppercase;
 }
 
-a {
+td a {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
   color: #EEE9E9;
   text-shadow: 1px 2px #c3090f;
 }
-a:hover {
+
+td a:hover {
   color: #c3090f;
   text-shadow: 1px 2px #EEE9E9;
 }
